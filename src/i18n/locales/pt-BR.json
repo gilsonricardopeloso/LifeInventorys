@@ -1,0 +1,25 @@
+{
+  "language": "Português",
+  "sidebar": {
+    "dashboard": "Dashboard",
+    "inventory": "Inventário",
+    "reports": "Relatórios",
+    "documents": "Documentos",
+    "notifications": "Notificações",
+    "users": "Usuários",
+    "settings": "Configurações",
+    "help": "Ajuda",
+    "logout": "Sair"
+  },
+  "settings": {
+    "settings": "Configurações",
+    "preferences": "Preferências",
+    "notifications": "Notificações",
+    "theme": "Tema",
+    "language": "Idioma",
+    "save": "Salvar Preferências",
+    "saving": "Salvando...",
+    "success": "Preferências salvas com sucesso",
+    "error": "Erro ao salvar preferências"
+  }
+}
