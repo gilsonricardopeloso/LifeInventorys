@@ -1,6 +1,8 @@
 {
   "menu": {
     "main": "Início",
+    "dashboard": "Dashboard",
+    "users": "Usuários",
     "habits": "Hábitos",
     "calendar": "Calendário",
     "statistics": "Estatísticas",
@@ -9,8 +11,15 @@
     "achievements": "Conquistas",
     "newHabit": "Novo Hábito"
   },
+
+  "theme": {
+    "light": "Claro",
+    "dark": "Escuro",
+    "system": "Sistema"
+  },
+
   "dashboard": {
-    "title": "Painel de Hábitos",
+    "title": "Dashboard",
     "totalHabits": "Total de Hábitos",
     "completed": "Concluídos",
     "ofHabits": "de {count} hábitos",
@@ -58,7 +67,7 @@
     "edit": "Editar"
   },
   "habits": {
-    "title": "Gerenciar Hábitos",
+    "title": "Hábitos",
     "active": "Ativos",
     "archived": "Arquivados",
     "noHabits": "Você ainda não tem hábitos.",
@@ -118,7 +127,7 @@
     "create": "Criar"
   },
   "calendar": {
-    "title": "Calendário de Hábitos",
+    "title": "Calendário",
     "allHabits": "Todos os hábitos",
     "someHabits": "Alguns hábitos",
     "completionRate": "Taxa de conclusão",
@@ -145,7 +154,11 @@
     "languageChanged": "Idioma alterado",
     "languageChangedDesc": "Idioma alterado para {language}.",
     "portugueseLanguage": "Português",
-    "englishLanguage": "Inglês"
+    "englishLanguage": "Inglês",
+    "save": "Salvar Preferências",
+    "saving": "Salvando...",
+    "placeholderSelectLanguage": "Selecione um idioma",
+    "placeholderSelectTheme": "Selecione o tema"
   },
   "statistics": {
     "title": "Estatísticas",

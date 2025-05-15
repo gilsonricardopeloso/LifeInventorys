@@ -8,7 +8,7 @@ import ptBRTranslations from "./translations/pt-BR.json"
 
 // Get initial language from localStorage or use browser language
 const getInitialLanguage = () => {
-  const storedLanguage = localStorage.getItem("i18nextLng")
+  const storedLanguage = localStorage.getItem("language")
   if (storedLanguage) return storedLanguage
 
   const browserLanguage = navigator.language
@@ -37,7 +37,7 @@ i18n
     detection: {
       order: ["localStorage", "navigator"],
       caches: ["localStorage"],
-      lookupLocalStorage: "i18nextLng",
+      lookupLocalStorage: "language",
     },
   })
   .then(() => {
@@ -46,7 +46,7 @@ i18n
 
 // Ensure language is saved in localStorage
 i18n.on("languageChanged", (lng) => {
-  localStorage.setItem("i18nextLng", lng)
+  localStorage.setItem("language", lng)
 })
 
 export { isLoading }

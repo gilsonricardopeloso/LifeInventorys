@@ -19,7 +19,7 @@ import { Theme, Language } from "@/types/preferences"
 
 // Get default settings from localStorage or use initial values
 const getInitialSettings = () => {
-  const storedSettings = localStorage.getItem("user-settings")
+  const storedSettings = localStorage.getItem("preferences")
   if (storedSettings) {
     return JSON.parse(storedSettings)
   }
@@ -107,7 +107,7 @@ export default function Settings() {
         </CardHeader>
         <CardContent className="space-y-6">
           <div className="flex items-center justify-between">
-            <Label htmlFor="notifications">Notificações</Label>
+            <Label htmlFor="notifications">{t("settings.notifications")}</Label>
             <Switch
               id="notifications"
               checked={notifications}
@@ -115,32 +115,40 @@ export default function Settings() {
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="theme">Tema</Label>
+            <Label htmlFor="theme">{t("settings.theme")}</Label>
             <Select value={theme} onValueChange={handleThemeChange}>
               <SelectTrigger id="theme">
-                <SelectValue placeholder="Selecione o tema" />
+                <SelectValue
+                  placeholder={t("settings.placeholderSelectTheme")}
+                />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value={Theme.LIGHT}>Claro</SelectItem>
-                <SelectItem value={Theme.DARK}>Escuro</SelectItem>
-                <SelectItem value={Theme.SYSTEM}>Sistema</SelectItem>
+                <SelectItem value={Theme.LIGHT}>{t("theme.light")}</SelectItem>
+                <SelectItem value={Theme.DARK}>{t("theme.dark")}</SelectItem>
+                <SelectItem value={Theme.SYSTEM}>
+                  {t("theme.system")}
+                </SelectItem>
               </SelectContent>
             </Select>
           </div>
           <div className="space-y-2">
-            <Label htmlFor="language">Idioma</Label>
+            <Label htmlFor="language">{t("settings.language")}</Label>
             <Select value={language} onValueChange={handleLanguageChange}>
               <SelectTrigger id="language">
-                <SelectValue placeholder="Selecione o idioma" />
+                <SelectValue placeholder={t("placeholderSelectLanguage")} />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value={Language.PT_BR}>Português</SelectItem>
-                <SelectItem value={Language.EN}>English</SelectItem>
+                <SelectItem value={Language.PT_BR}>
+                  {t("settings.portugueseLanguage")}
+                </SelectItem>
+                <SelectItem value={Language.EN}>
+                  {t("settings.englishLanguage")}
+                </SelectItem>
               </SelectContent>
             </Select>
           </div>
           <Button onClick={handleSave} disabled={isLoading}>
-            {isLoading ? "Salvando..." : "Salvar Preferências"}
+            {isLoading ? t("settings.saving") : t("settings.save")}
           </Button>
         </CardContent>
       </Card>

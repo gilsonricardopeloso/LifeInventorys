@@ -1,4 +1,3 @@
-import React from "react"
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import {
   Table,
@@ -44,7 +43,7 @@ export default function HabitStatsMock() {
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">
-              {t("registeredHabits", "statistics")}
+              {t("statistics.registeredHabits")}
             </CardTitle>
             <BarChart className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
@@ -55,7 +54,7 @@ export default function HabitStatsMock() {
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">
-              {t("completedThisWeek", "statistics")}
+              {t("statistics.completedThisWeek")}
             </CardTitle>
             <Activity className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
@@ -68,7 +67,7 @@ export default function HabitStatsMock() {
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">
-              {t("completionRate", "statistics")}
+              {t("statistics.completionRate")}
             </CardTitle>
             <CirclePercent className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
@@ -81,17 +80,17 @@ export default function HabitStatsMock() {
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">
-              {t("currentStreak", "statistics")}
+              {t("statistics.currentStreak")}
             </CardTitle>
             <ChartLine className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">
-              {mockStats.currentStreak} {t("days", "statistics")}
+              {mockStats.currentStreak} {t("statistics.days")}
             </div>
             <div className="text-xs text-muted-foreground">
-              {t("longestStreak", "calendar")}: {mockStats.longestStreak}{" "}
-              {t("days", "statistics")}
+              {t("calendar.longestStreak")}: {mockStats.longestStreak}{" "}
+              {t("statistics.days")}
             </div>
           </CardContent>
         </Card>
@@ -99,16 +98,16 @@ export default function HabitStatsMock() {
 
       <Card>
         <CardHeader>
-          <CardTitle>{t("weeklyProgress", "statistics")}</CardTitle>
+          <CardTitle>{t("statistics.weeklyProgress")}</CardTitle>
         </CardHeader>
         <CardContent>
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead>{t("day", "statistics")}</TableHead>
-                <TableHead>{t("progress", "statistics")}</TableHead>
+                <TableHead>{t("statistics.days")}</TableHead>
+                <TableHead>{t("statistics.progress")}</TableHead>
                 <TableHead className="text-right">
-                  % {t("complete", "statistics")}
+                  % {t("statistics.complete")}
                 </TableHead>
               </TableRow>
             </TableHeader>

@@ -38,13 +38,13 @@ function AppSidebar() {
       <SidebarHeader className="flex justify-center items-center p-4">
         <div className="flex items-center gap-2">
           <Activity className="h-6 w-6 text-primary" />
-          <h1 className="text-lg font-bold">Life Inventory</h1>
+          <h1 className="text-lg font-bold">Life Inventorys</h1>
         </div>
       </SidebarHeader>
 
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>{t("main", "menu")}</SidebarGroupLabel>
+          <SidebarGroupLabel>{t("menu.main")}</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               <SidebarMenuItem>
@@ -58,7 +58,7 @@ function AppSidebar() {
                     }
                   >
                     <Home className="h-5 w-5" />
-                    <span>Dashboard</span>
+                    <span>{t("menu.dashboard")}</span>
                   </NavLink>
                 </SidebarMenuButton>
               </SidebarMenuItem>
@@ -75,7 +75,7 @@ function AppSidebar() {
                       }
                     >
                       <UsersIcon className="h-5 w-5" />
-                      <span>Usuários</span>
+                      <span>{t("menu.users")}</span>
                     </NavLink>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
@@ -92,7 +92,7 @@ function AppSidebar() {
                     }
                   >
                     <Activity className="h-5 w-5" />
-                    <span>{t("habits", "menu")}</span>
+                    <span>{t("menu.habits")}</span>
                   </NavLink>
                 </SidebarMenuButton>
               </SidebarMenuItem>
@@ -108,7 +108,7 @@ function AppSidebar() {
                     }
                   >
                     <Calendar className="h-5 w-5" />
-                    <span>{t("calendar", "menu")}</span>
+                    <span>{t("menu.calendar")}</span>
                   </NavLink>
                 </SidebarMenuButton>
               </SidebarMenuItem>
@@ -124,7 +124,7 @@ function AppSidebar() {
                     }
                   >
                     <BarChart3 className="h-5 w-5" />
-                    <span>{t("statistics", "menu")}</span>
+                    <span>{t("menu.statistics")}</span>
                   </NavLink>
                 </SidebarMenuButton>
               </SidebarMenuItem>
@@ -133,7 +133,7 @@ function AppSidebar() {
         </SidebarGroup>
 
         <SidebarGroup>
-          <SidebarGroupLabel>{t("configuration", "menu")}</SidebarGroupLabel>
+          <SidebarGroupLabel>{t("menu.configuration")}</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               <SidebarMenuItem>
@@ -147,7 +147,7 @@ function AppSidebar() {
                     }
                   >
                     <Award className="h-5 w-5" />
-                    <span>{t("achievements", "menu")}</span>
+                    <span>{t("menu.achievements")}</span>
                   </NavLink>
                 </SidebarMenuButton>
               </SidebarMenuItem>
@@ -163,7 +163,7 @@ function AppSidebar() {
                     }
                   >
                     <Settings className="h-5 w-5" />
-                    <span>{t("settings", "menu")}</span>
+                    <span>{t("menu.settings")}</span>
                   </NavLink>
                 </SidebarMenuButton>
               </SidebarMenuItem>
@@ -180,7 +180,7 @@ function AppSidebar() {
           }
         >
           <PlusCircle className="h-4 w-4" />
-          <span>{t("newHabit", "menu")}</span>
+          <span>{t("menu.newHabit")}</span>
         </UnifiedButton>
       </SidebarFooter>
     </Sidebar>

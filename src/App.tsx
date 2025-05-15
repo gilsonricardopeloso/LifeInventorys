@@ -26,7 +26,7 @@ import Settings from "./pages/Settings"
 import Landing from "./pages/Landing"
 import Users from "./pages/Users"
 import { authService } from "@/services/auth"
-import { useThemeSettings } from "@/hooks/useThemeSettings"
+//import { useThemeSettings } from "@/hooks/useThemeSettings"
 import "./i18n"
 
 const queryClient = new QueryClient()
@@ -51,7 +51,7 @@ const AppRoutes = () => {
   )
   const navigate = useNavigate()
   const location = useLocation()
-  const { theme } = useThemeSettings()
+  // const { theme } = useThemeSettings()
 
   // Inicializa autenticação apenas no mount
   useEffect(() => {

@@ -1,4 +1,5 @@
 import { format } from "date-fns"
+import { useDateFnsLocale } from "@/hooks/use-date-fns-locale"
 import { Calendar } from "@/components/ui/calendar"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { useHabitCompletion } from "@/hooks/use-habit-completion"
@@ -9,6 +10,7 @@ import { useTranslation } from "react-i18next"
 import { useState } from "react"
 
 const CalendarPage = () => {
+  const dateFnsLocale = useDateFnsLocale()
   const [date, setDate] = useState<Date>(new Date())
   const { t } = useTranslation()
   const { data: habits = [] } = useQuery<Habit[]>({
@@ -35,7 +37,7 @@ const CalendarPage = () => {
     <div className="container py-8">
       <Card>
         <CardHeader>
-          <CardTitle>{t("title", "calendar")}</CardTitle>
+          <CardTitle>{t("calendar.title")}</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="flex justify-center">
@@ -60,13 +62,13 @@ const CalendarPage = () => {
             <div className="flex items-center gap-2">
               <div className="h-3 w-3 rounded-full bg-habit-success" />
               <span className="text-sm text-muted-foreground">
-                {t("allHabits", "calendar")}
+                {t("calendar.allHabits")}
               </span>
             </div>
             <div className="flex items-center gap-2">
               <div className="h-3 w-3 rounded-full bg-habit-warning" />
               <span className="text-sm text-muted-foreground">
-                {t("someHabits", "calendar")}
+                {t("calendar.someHabits")}
               </span>
             </div>
           </div>

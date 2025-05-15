@@ -1,6 +1,8 @@
 {
   "menu": {
     "main": "Home",
+    "dashboard": "Dashboard",
+    "users": "Users",
     "habits": "Habits",
     "calendar": "Calendar",
     "statistics": "Statistics",
@@ -9,6 +11,13 @@
     "achievements": "Achievements",
     "newHabit": "New Habit"
   },
+
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+
   "dashboard": {
     "title": "Habits Dashboard",
     "totalHabits": "Total Habits",
@@ -40,7 +49,7 @@
     "english": "English"
   },
   "users": {
-    "title": "System Users",
+    "title": "Users",
     "search": "Search Users",
     "searchPlaceholder": "Search by name, email...",
     "searchButton": "Search",
@@ -58,7 +67,7 @@
     "edit": "Edit"
   },
   "habits": {
-    "title": "Manage Habits",
+    "title": "Habits",
     "active": "Active",
     "archived": "Archived",
     "noHabits": "You don't have any habits yet.",
@@ -118,7 +127,7 @@
     "create": "Create"
   },
   "calendar": {
-    "title": "Habits Calendar",
+    "title": "Calendar",
     "allHabits": "All habits",
     "someHabits": "Some habits",
     "completionRate": "Completion rate",
@@ -145,7 +154,11 @@
     "languageChanged": "Language changed",
     "languageChangedDesc": "Language changed to {language}.",
     "portugueseLanguage": "Portuguese",
-    "englishLanguage": "English"
+    "englishLanguage": "English",
+    "save": "Save Preferences",
+    "saving": "Saving...",
+    "placeholderSelectLanguage": "Select a language",
+    "placeholderSelectTheme": "Select theme"
   },
   "statistics": {
     "title": "Statistics",

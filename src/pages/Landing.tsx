@@ -7,7 +7,7 @@ interface LandingProps {
 
 const Landing = ({ onLogin }: LandingProps) => {
   const { t } = useTranslation()
-  const settings = localStorage.getItem("user-settings")
+  const settings = localStorage.getItem("preferences")
   if (settings) {
     const { theme } = JSON.parse(settings)
     console.log(theme)

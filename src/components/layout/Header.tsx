@@ -37,7 +37,7 @@ export default function Header({ onLogout }: HeaderProps) {
   }
 
   const getLanguageDisplay = () => {
-    return t("language") === "English" ? "EN" : "PT"
+    return t("language") === "English" ? "EN" : "PT-BR"
   }
 
   const getThemeIcon = () => {
@@ -54,21 +54,20 @@ export default function Header({ onLogout }: HeaderProps) {
   const getThemeLabel = () => {
     switch (theme) {
       case Theme.LIGHT:
-        return "Claro"
+        return <span>{t("theme.light")}</span>
       case Theme.DARK:
-        return "Escuro"
+        return <span>{t("theme.dark")}</span>
       case Theme.SYSTEM:
-        return "Sistema"
+        return <span>{t("theme.system")}</span>
     }
   }
 
   return (
-    <header className="fixed top-0 left-0 w-full h-16 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 flex items-center justify-between px-4 z-30">
+    <header className="fixed top-0 left-0 w-full h-16 border-b flex items-center justify-between px-4 z-30">
       <div className="flex items-center gap-2">
         <SidebarTrigger>
           <Menu className="h-5 w-5" />
         </SidebarTrigger>
-        <h1 className="text-xl font-bold text-primary ml-2">Life Inventory</h1>
       </div>
 
       <div className="flex items-center gap-2">

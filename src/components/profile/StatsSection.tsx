@@ -1,12 +1,17 @@
-
-import React from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ChartBarBig, ChartArea, ChartLine, ChartPie } from "lucide-react";
-import { Table, TableHeader, TableRow, TableHead, TableBody, TableCell } from "@/components/ui/table";
-import { Progress } from "@/components/ui/progress";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { ChartBarBig, ChartArea, ChartLine, ChartPie } from "lucide-react"
+import {
+  Table,
+  TableHeader,
+  TableRow,
+  TableHead,
+  TableBody,
+  TableCell,
+} from "@/components/ui/table"
+import { Progress } from "@/components/ui/progress"
 
 interface StatsSectionProps {
-  userId: string;
+  userId: string
 }
 
 const StatsSection = ({ userId }: StatsSectionProps) => {
@@ -17,22 +22,24 @@ const StatsSection = ({ userId }: StatsSectionProps) => {
     currentStreak: 7,
     longestStreak: 14,
     weeklyProgress: [
-      { day: 'Segunda', completed: 5, total: 6 },
-      { day: 'Terça', completed: 4, total: 6 },
-      { day: 'Quarta', completed: 6, total: 6 },
-      { day: 'Quinta', completed: 3, total: 6 },
-      { day: 'Sexta', completed: 5, total: 6 },
-      { day: 'Sábado', completed: 4, total: 6 },
-      { day: 'Domingo', completed: 2, total: 6 },
-    ]
-  };
+      { day: "Segunda", completed: 5, total: 6 },
+      { day: "Terça", completed: 4, total: 6 },
+      { day: "Quarta", completed: 6, total: 6 },
+      { day: "Quinta", completed: 3, total: 6 },
+      { day: "Sexta", completed: 5, total: 6 },
+      { day: "Sábado", completed: 4, total: 6 },
+      { day: "Domingo", completed: 2, total: 6 },
+    ],
+  }
 
   return (
     <div className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Total de Hábitos</CardTitle>
+            <CardTitle className="text-sm font-medium">
+              Total de Hábitos
+            </CardTitle>
             <ChartBarBig className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
@@ -42,7 +49,9 @@ const StatsSection = ({ userId }: StatsSectionProps) => {
 
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Taxa de Conclusão</CardTitle>
+            <CardTitle className="text-sm font-medium">
+              Taxa de Conclusão
+            </CardTitle>
             <ChartPie className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
@@ -52,7 +61,9 @@ const StatsSection = ({ userId }: StatsSectionProps) => {
 
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Sequência Atual</CardTitle>
+            <CardTitle className="text-sm font-medium">
+              Sequência Atual
+            </CardTitle>
             <ChartLine className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
@@ -62,7 +73,9 @@ const StatsSection = ({ userId }: StatsSectionProps) => {
 
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Maior Sequência</CardTitle>
+            <CardTitle className="text-sm font-medium">
+              Maior Sequência
+            </CardTitle>
             <ChartArea className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
@@ -90,7 +103,10 @@ const StatsSection = ({ userId }: StatsSectionProps) => {
                   <TableCell>{day.day}</TableCell>
                   <TableCell>
                     <div className="flex items-center gap-2">
-                      <Progress value={(day.completed / day.total) * 100} className="h-2" />
+                      <Progress
+                        value={(day.completed / day.total) * 100}
+                        className="h-2"
+                      />
                       <span className="text-sm text-muted-foreground">
                         {day.completed}/{day.total}
                       </span>
@@ -106,7 +122,7 @@ const StatsSection = ({ userId }: StatsSectionProps) => {
         </CardContent>
       </Card>
     </div>
-  );
-};
+  )
+}
 
-export default StatsSection;
+export default StatsSection

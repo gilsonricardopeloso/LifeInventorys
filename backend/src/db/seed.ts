@@ -9,7 +9,7 @@ async function seed() {
     await db.delete(users)
 
     // Cria usuário admin
-    const adminPassword = await bcrypt.hash("admin123", 10)
+    const adminPassword: string = await bcrypt.hash("admin123", 10)
     await db.insert(users).values({
       name: "Admin",
       email: "admin@example.com",
@@ -24,7 +24,7 @@ async function seed() {
     })
 
     // Cria usuário normal
-    const userPassword = await bcrypt.hash("user123", 10)
+    const userPassword: string = await bcrypt.hash("user123", 10)
     await db.insert(users).values({
       name: "User",
       email: "user@example.com",
